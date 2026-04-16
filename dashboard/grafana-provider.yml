@@ -1,0 +1,13 @@
+# Grafana Dashboard Configuration
+# Place in provisioning/dashboards/
+
+apiVersion: 1
+providers:
+  - name: 'Swarm Labs'
+    orgId: 1
+    folder: ''
+    type: file
+    disableDeletion: false
+    editable: true
+    options:
+      path: /var/lib/grafana/dashboards

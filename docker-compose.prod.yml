@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  # Production override
+  swarm:
+    environment:
+      - NODE_ENV=production
+      - LOG_LEVEL=warning
+    restart: always
+    deploy:
+      replicas: 2
+      resources:
+        limits:
+          cpus: '2'
+          memory: 4G
+        reservations:
+          cpus: '1'
+          memory: 2G
+
+  # Production database
+  postgres:
+    volumes:
+      - postgres_prod_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+
+volumes:
+  postgres_prod_data:
