@@ -1,0 +1,101 @@
+version: '3.8'
+
+services:
+  # Main application
+  swarm:
+    build: .
+    container_name: swarm-labs
+    environment:
+      - PYTHONPATH=/app
+      - DATABASE_URL=postgresql://swarm:swarm@postgres:5432/swarm_labs
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+    env_file:
+      - .env
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      timescaledb:
+        condition: service_healthy
+    volumes:
+      - ./logs:/app/logs
+    restart: unless-stopped
+    networks:
+      - swarm-network
+
+  # PostgreSQL for general data
+  postgres:
+    image: postgres:15-alpine
+    container_name: swarm-postgres
+    environment:
+      POSTGRES_DB: swarm_labs
+      POSTGRES_USER: swarm
+      POSTGRES_PASSWORD: swarm
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U swarm -d swarm_labs"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      - swarm-network
+
+  # TimescaleDB for market data
+  timescaledb:
+    image: timescale/timescaledb:latest-pg15
+    container_name: swarm-timescale
+    environment:
+      POSTGRES_DB: swarm_market
+      POSTGRES_USER: swarm
+      POSTGRES_PASSWORD: swarm
+    volumes:
+      - timescale_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U swarm -d swarm_market"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      - swarm-network
+
+  # Redis for message queue
+  redis:
+    image: redis:7-alpine
+    container_name: swarm-redis
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+    networks:
+      - swarm-network
+
+  # Grafana for monitoring (optional)
+  grafana:
+    image: grafana/grafana:latest
+    container_name: swarm-grafana
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    volumes:
+      - grafana_data:/var/lib/grafana
+    depends_on:
+      - timescaledb
+    networks:
+      - swarm-network
+
+volumes:
+  postgres_data:
+  timescale_data:
+  redis_data:
+  grafana_data:
+
+networks:
+  swarm-network:
+    driver: bridge
