@@ -1,0 +1,25 @@
+{
+  "name": "Swarm Labs Exchange Configuration",
+  "version": "1.0.0",
+  "exchanges": {
+    "binance": {
+      "enabled": true,
+      "testnet": true,
+      "symbols": ["BTC/USDT", "ETH/USDT", "SOL/USDT"]
+    },
+    "bybit": {
+      "enabled": true,
+      "testnet": true,
+      "symbols": ["BTC/USDT", "ETH/USDT"]
+    },
+    "oanda": {
+      "enabled": false,
+      "practice": true,
+      "symbols": ["EUR_USD", "GBP_USD", "USD_JPY"]
+    },
+    "interactive_brokers": {
+      "enabled": false,
+      "symbols": ["ES", "NQ", "YM"]
+    }
+  }
+}

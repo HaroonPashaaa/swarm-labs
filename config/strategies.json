@@ -1,0 +1,32 @@
+{
+  "name": "Swarm Labs Default Strategy Configuration",
+  "version": "1.0.0",
+  "strategies": {
+    "momentum": {
+      "enabled": true,
+      "weight": 1.0,
+      "params": {
+        "fast_period": 9,
+        "slow_period": 21,
+        "atr_period": 14
+      }
+    },
+    "mean_reversion": {
+      "enabled": true,
+      "weight": 1.0,
+      "params": {
+        "bb_period": 20,
+        "bb_std": 2.0,
+        "rsi_period": 14
+      }
+    },
+    "scalping": {
+      "enabled": false,
+      "weight": 0.8,
+      "params": {
+        "profit_target": 0.002,
+        "stop_loss": 0.001
+      }
+    }
+  }
+}
