@@ -1,4 +1,4 @@
-# Swarm Labs - Multi-Agent Trading System
+# Wojak Capital - Multi-Agent Trading System
 # Core package
 
 __version__ = "1.0.0"

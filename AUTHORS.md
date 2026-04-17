@@ -11,3 +11,5 @@
 Thank you to all contributors!
 
 Want to contribute? See [CONTRIBUTING.md](CONTRIBUTING.md)
+
+**Wojak Capital** - For the memes and the gains

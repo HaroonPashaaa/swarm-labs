@@ -1,6 +1,6 @@
-# Swarm Labs
+# Wojak Capital
 
-> Multi-Agent AI Trading Swarm with Cross-Market Intelligence
+> Multi-Agent AI Trading System - When the market dips, we buy
 
 [![Python](https://img.shields.io/badge/Python-3.11-blue.svg)](https://www.python.org/)
 [![Redis](https://img.shields.io/badge/Redis-7.0-red.svg)](https://redis.io/)
@@ -9,7 +9,7 @@
 
 ## Overview
 
-Swarm Labs is a sophisticated multi-agent trading system where specialized AI agents monitor cryptocurrency futures, forex, and stock futures markets simultaneously. Agents consult each other on optimal strategies, report intelligence to OpenClaw (the central orchestrator), and execute trades through integrated exchange APIs.
+Wojak Capital is a sophisticated multi-agent trading system where specialized AI agents monitor cryptocurrency futures, forex, and stock futures markets simultaneously. Agents consult each other on optimal strategies, report intelligence to OpenClaw (the central orchestrator), and execute trades through integrated exchange APIs.
 
 ## Architecture
 
@@ -83,7 +83,7 @@ Swarm Labs is a sophisticated multi-agent trading system where specialized AI ag
 
 ```bash
 # Clone repository
-git clone https://github.com/HaroonPashaaa/swarm-labs.git
+git clone https://github.com/HaroonPashaaa/wojak-capital.git
 cd swarm-labs
 
 # Install dependencies
@@ -114,7 +114,7 @@ python -m openclaw.core
 ## Repository Structure
 
 ```
-swarm-labs/
+wojak-capital/
 ├── openclaw/          # Central orchestrator
 ├── agents/            # Market-specific agents
 ├── strategies/        # Trading strategies
@@ -141,4 +141,4 @@ MIT License - See [LICENSE](LICENSE) for details.
 
 ---
 
-Built with precision by the Swarm Labs team.
+Built with precision by the Wojak Capital team.
