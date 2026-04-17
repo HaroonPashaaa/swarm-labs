@@ -15,7 +15,7 @@ from core.performance import PerformanceTracker
 
 async def main():
     """Generate performance report"""
-    print("📊 Swarm Labs Performance Report")
+    print("📊 Wojak Capital Performance Report")
     print("=" * 50)
     print()
     

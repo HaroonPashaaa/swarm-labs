@@ -2,7 +2,7 @@
 
 ## System Overview
 
-Swarm Labs is a multi-agent trading system where specialized AI agents monitor multiple financial markets simultaneously, consult each other on optimal strategies, and report to OpenClaw (the central orchestrator) for final trading decisions.
+Wojak Capital is a multi-agent trading system where specialized AI agents monitor multiple financial markets simultaneously, consult each other on optimal strategies, and report to OpenClaw (the central orchestrator) for final trading decisions.
 
 ## Architecture Diagram
 

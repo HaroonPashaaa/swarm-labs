@@ -2,4 +2,4 @@
 # Core package
 
 __version__ = "1.0.0"
-__author__ = "Swarm Labs Team"
+__author__ = "Wojak Capital Team"

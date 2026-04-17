@@ -1,4 +1,4 @@
-# Swarm Labs Configuration
+# Wojak Capital Configuration
 
 ## Environment Variables
 

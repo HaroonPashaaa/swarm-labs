@@ -1,5 +1,5 @@
 """
-Utility functions for Swarm Labs
+Utility functions for Wojak Capital
 """
 
 import logging

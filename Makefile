@@ -3,7 +3,7 @@
 .PHONY: help install test lint format docker run clean
 
 help:
-	@echo "Swarm Labs Makefile"
+	@echo "Wojak Capital Makefile"
 	@echo ""
 	@echo "Available commands:"
 	@echo "  install    - Install dependencies"

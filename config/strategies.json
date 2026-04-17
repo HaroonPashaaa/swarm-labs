@@ -1,5 +1,5 @@
 {
-  "name": "Swarm Labs Default Strategy Configuration",
+  "name": "Wojak Capital Default Strategy Configuration",
   "version": "1.0.0",
   "strategies": {
     "momentum": {

@@ -50,6 +50,6 @@ Use WSL2 (Windows Subsystem for Linux):
 curl -fsSL https://get.docker.com -o get-docker.sh
 sh get-docker.sh
 
-# Run Swarm Labs
+# Run Wojak Capital
 docker-compose up -d
 ```

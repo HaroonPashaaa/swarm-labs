@@ -1,6 +1,6 @@
-# Contributing to Swarm Labs
+# Contributing to Wojak Capital
 
-Thank you for your interest in contributing to Swarm Labs!
+Thank you for your interest in contributing to Wojak Capital!
 
 ## Development Setup
 

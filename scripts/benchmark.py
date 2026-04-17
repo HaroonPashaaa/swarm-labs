@@ -42,7 +42,7 @@ def benchmark_database_writes():
 
 def main():
     """Run all benchmarks"""
-    print("🚀 Swarm Labs Benchmark")
+    print("🚀 Wojak Capital Benchmark")
     print("=" * 50)
     
     benchmark_database_writes()
