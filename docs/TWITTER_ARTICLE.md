@@ -1,5 +1,6 @@
 # Wojak Capital - Twitter Article
 ## Professional Thread for X (Twitter)
+<img width="1146" height="754" alt="image" src="https://github.com/user-attachments/assets/3b104da8-dd0d-49fc-ae84-19c87ed717bc" />
 
 ---
 
