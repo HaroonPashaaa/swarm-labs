@@ -1,7 +1,7 @@
 # Core
 python-dotenv>=1.0.0
 asyncio>=3.4.3
-aiohttp>=3.9.0
+aiohttp>=3.13.5
 
 # Database
 asyncpg>=0.29.0
